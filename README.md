@@ -53,6 +53,7 @@ export TRACK_4_DATA_ROOT={/path/to/track_4/root_dir/test_data}
 ```
 
 For example: ``export TRACK_4_DATA_ROOT=/mnt/c/Vinh/pgone_repo/test_data``
+Which "test_data" is folder where you put your test video "testA_1", "testA_2", etc. and "video_id.txt" 
 
 ### Download pre-trained model
 ```bash

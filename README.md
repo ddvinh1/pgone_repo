@@ -7,7 +7,7 @@ Proposed solution for [_AI City Challenge 2022_](https://www.aicitychallenge.org
 ![teaser](assets/teaser.jpg)
 
 Paper to [download](https://openaccess.thecvf.com/content/CVPR2022W/AICity/html/Bartl_PersonGONE_Image_Inpainting_for_Automated_Checkout_Solution_CVPRW_2022_paper.html)
-### Note: This is a modifed repository for education purposes. Go to https://github.com/BUT-GRAPH-at-FIT/PersonGONE to see original repository. 
+### Note: This is a modified repository for education purposes. Go to https://github.com/BUT-GRAPH-at-FIT/PersonGONE to see original repository. 
 ### Tested environment
 
 * WSL2 Ubuntu 22.04

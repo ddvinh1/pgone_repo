@@ -1,0 +1,3 @@
+- model.path=/mnt/c/Users/Vinh/PersonGONE/image_inpainting/big-lama
+- indir=/mnt/c/Users/Vinh/PersonGONE/data/lama_input/testA_4
+- outdir=/mnt/c/Users/Vinh/PersonGONE/data/inpainting/testA_4

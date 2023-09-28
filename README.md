@@ -27,6 +27,7 @@ git clone https://github.com/ddvinh1/pgone_repo.git
 conda create -n pgone python=3.8 -y
 conda activate pgone
 cd <path/to/repo>
+```
 3. Install dependencies
 ```bash
 pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html

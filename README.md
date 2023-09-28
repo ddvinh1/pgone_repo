@@ -7,34 +7,35 @@ Proposed solution for [_AI City Challenge 2022_](https://www.aicitychallenge.org
 ![teaser](assets/teaser.jpg)
 
 Paper to [download](https://openaccess.thecvf.com/content/CVPR2022W/AICity/html/Bartl_PersonGONE_Image_Inpainting_for_Automated_Checkout_Solution_CVPRW_2022_paper.html)
-
+### Note: This is a modifed repository for education purposes. Go to https://github.com/BUT-GRAPH-at-FIT/PersonGONE to see original repository. 
 ### Tested environment
 
-* Ubuntu 20.04
-* Python 3.8
+* WSL2 Ubuntu 22.04
+* Python 3.8.18
 * CUDA 11.3
-* CuDNN 8.2.1
+* CuDNN 8.2.1 (?)
 * PyTorch 1.11
-* Nvidia GeForce RTX 3090
+* Nvidia GeForce RTX 3050 Mobile
 
 ## Environment setup
-
-1. Install CUDA 11.3 and CuDNN
-
-2. Clone this repo:
+1. Clone repo
 ```bash
-git clone https://github.com/BUT-GRAPH-at-FIT/PersonGONE.git
+git clone https://github.com/ddvinh1/pgone_repo.git
 ```
-3. Create virtual environment and activate it (optional)
-
-4. Install dependencies
+2. Setup environment
 ```bash
-cd PersonGONE
+conda create -n pgone python=3.8 -y
+conda activate pgone
+cd <path/to/repo>
+3. Install dependencies
+```bash
 pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
+#conda install cudatoolkit=11.3 cudnn -c pytorch -c conda-forge #only run this line if the code doesn't work
 pip install mmcv-full==1.4.6 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.10.0/index.html
 pip install -r requirements.txt
 ```
-5. Set environment variables
+
+4. Set environment variables
 ```bash
 export PERSON_GONE_DIR=$(pwd)
 ```

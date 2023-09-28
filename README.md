@@ -32,6 +32,8 @@ cd <path/to/repo>
 ```bash
 pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
 #conda install cudatoolkit=11.3 cudnn -c pytorch -c conda-forge #only run this line if the code doesn't work
+pip install Cython
+pip install pycocotools
 pip install mmcv-full==1.4.6 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.10.0/index.html
 pip install -r requirements.txt
 ```
@@ -47,16 +49,17 @@ export PERSON_GONE_DIR=$(pwd)
 If you do not want to train detector, only ``AIC22_Track4_TestA.zip`` (or TestB) is sufficient.
 
 ```bash
-export TRACK_4_DATA_ROOT={/path/to/track_4/root_dir}
+export TRACK_4_DATA_ROOT={/path/to/track_4/root_dir/test_data}
 ```
 
-For example: ``export TRACK_4_DATA_ROOT=/mnt/data/AIC22_Track4_TestA/Test_A``
+For example: ``export TRACK_4_DATA_ROOT=/mnt/c/Vinh/pgone_repo/test_data``
 
 ### Download pre-trained model
 ```bash
 cd $PERSON_GONE_DIR
 python download_pretrained_models.py --detector
 ```
+This will download LaMa, DetectoRS, HTC, PointRend, YOLOX-L and YOLACT model (approx. 3GB)
 Alternatively, you may [train detector at your own](#training-ref)
 
 ### Inpainting process
@@ -64,7 +67,6 @@ Run:
 ```bash
 python inpainting_process.py --video_id $TRACK_4_DATA_ROOT/video_id.txt
 ```
-
 ``video_id.txt`` file is available in ``AIC22_Track4_TestA`` and contain video IDs and video file names (in the same directory)
 
 ### Detect ROI
